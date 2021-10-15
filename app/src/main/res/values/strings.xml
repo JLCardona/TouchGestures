@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TouchGestures</string>
+    <string name="Clickme">Click Me</string>
 </resources>

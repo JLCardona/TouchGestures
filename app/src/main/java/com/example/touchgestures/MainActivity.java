@@ -1,9 +1,11 @@
 package com.example.touchgestures;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GestureDetectorCompat;
 import androidx.core.view.MotionEventCompat;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -49,16 +51,62 @@ import android.view.View;
  * EXERCISE 2 OF TOUCH GESTURES : VIEW
  */
 
-    public class MainActivity extends AppCompatActivity {
-    private static final String DEBUG_TAG = MainActivity.class.getSimpleName();
+    /*public class MainActivity extends Activity {
+    private static final String TAG = "MyActivity";
 
-    View myView = findViewById(R.id.my_view);
-    myView.setOnTouchListener(new OnTouchListener() {
-        public boolean onTouch(View v, MotionEvent event) {
-            // ... Respond to touch events
-            return true;
+    public boolean onTouchEvent(MotionEvent event) {
+        int action = MotionEventCompat.getActionMasked(event);
+        switch (action) {
+            case (MotionEvent.ACTION_DOWN):
+                Log.d(TAG, "Action was DOWN");
+                return true;
+            case (MotionEvent.ACTION_MOVE):
+                Log.d(TAG, "Action was MOVE");
+                return true;
+            case (MotionEvent.ACTION_UP):
+                Log.d(TAG, "Action was UP");
+                return true;
+            case (MotionEvent.ACTION_CANCEL):
+                Log.d(TAG, "Action was CANCEL");
+                return true;
+            case (MotionEvent.ACTION_OUTSIDE):
+                Log.d(TAG, "Movement occurred outside bounds " +
+                        "of current screen element");
+                return true;
+            default:
+                return super.onTouchEvent(event);
         }
-    });
+    }
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        View myView = findViewById(R.id.button);
+        myView.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent event) {
+                int action = event.getAction();
+                switch (action) {
+                    case (MotionEvent.ACTION_DOWN):
+                        Log.d(TAG, "Action was DOWN");
+                        return true;
+                    case (MotionEvent.ACTION_MOVE):
+                        Log.d(TAG, "Action was MOVE");
+                        return true;
+                    case (MotionEvent.ACTION_UP):
+                        Log.d(TAG, "Action was UP");
+                        return true;
+                    case (MotionEvent.ACTION_CANCEL):
+                        Log.d(TAG, "Action was CANCEL");
+                        return true;
+                    case (MotionEvent.ACTION_OUTSIDE):
+                        Log.d(TAG, "Movement occurred outside bounds " +
+                                "of current screen element");
+                        return true;
+                    default:
+                        return true;
+                }
+            }
+        });
+    }
 }*/
 
 /**
